@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Saludos Thymeleaf</title>
+</head>
+<body>
+    <p th:text="'Hello, ' + ${saludo} + '!'" />
+    
+   <table>
+   <th:block th:each="emple : ${empleados}">
+      <tr>
+         <td th:text="${emple.nombre}">...</td>
+         <td th:text="${emple.ap}">...</td>
+      </tr>
+      <tr>
+         <td colspan="2" th:text="${emple.usuario}">...</td>
+      </tr>
+   </th:block>
+</table>
+</body>
+</html>
